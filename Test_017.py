@@ -2,7 +2,7 @@ from appium import webdriver
 
 desired_caps = {
     'platformName' : 'Android',
-    'platformVersion': '6.0',
+    'platformVersion': '5.1.1',
     'deviceName':'test',
     'appPackage' : 'com.ibox.calculators',
     'appActivity': '.CalculatorActivity',
