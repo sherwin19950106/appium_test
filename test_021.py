@@ -13,5 +13,8 @@ desired_caps = {
                 }
 driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)
 driver.implicitly_wait(5)
-print(driver.contexts)
-driver.switch_to.content('WEBVIEW_com.example.jcy.wvtest')
+driver.switch_to.context(driver.contexts[1])
+driver.find_element_by_id('index-kw').send_keys('松勤\n')
+driver.switch_to.context(driver.contexts[0])
+driver.find_element_by_accessibility_id('通知').click()
+driver.quit()
